@@ -1,8 +1,12 @@
 import matplotlib.pyplot as plt 
 import numpy as np
 import json
+import os
 
-data = open('city_list.json')
+script_dir = os.path.dirname(os.path.abspath(__file__))
+json_path = os.path.join(script_dir, 'city_list.json')
+data = open(json_path)
+
 fromjson = json.load(data)
 cities = fromjson["cities"]
 
